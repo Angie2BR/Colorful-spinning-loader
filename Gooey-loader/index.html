@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/1afc8e4e5c.js"
+			crossorigin="anonymous"
+		></script>
+
+		<title>Gooey Loader</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="dot dot-1"></div>
+			<div class="dot dot-2"></div>
+			<div class="dot dot-3"></div>
+		</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+					<feColorMatrix
+						in="blur"
+						mode="matrix"
+						values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"
+					/>
+				</filter>
+			</defs>
+		</svg>
+
+		<script src="script.js"></script>
+	</body>
+</html>
+
+<!-- <svg width="330px" height="220px" xmlns="http://www.w3.org/2000/svg">
+	<filter id="blurMe">
+		<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+		<feColorMatrix
+			in="blur"
+			mode="matrix"
+			values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"
+		/>
+	</filter>
+
+	<circle
+		cx="60"
+		cy="60"
+		r="50"
+		fill="green"
+		filter="drop-shadow(16px 20px 20px purple)"
+	/>
+
+	<circle cx="200" cy="60" r="50" filter="url(#blurMe)" />
+</svg> -->
